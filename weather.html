@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dr="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style1.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="wrapper">
+        <header><span class="arrow">&#x2190</span> WEATHER APP </header>
+        <section class="input-part">
+            <p class="info-text">Please enter a valid city name</p>
+            <input type="text" placeholder="Enter city name" spellcheck="false" required>
+            <div class="seperator"></div>
+            <button class="btn">Get Device Location</button>
+        </section>
+        <section class="weatherpart">
+            <img src="#" alt="Weather Icon">
+            <div class="temp">
+                <span class="numb"></span>
+                <span class="deg">&#xb0</span><span id="celsius">C</span>
+            </div>
+            <div class="weather">Broken Clouds</div>
+            <div class="location">
+                <i class="bx bx-map"></i>
+                <span>New Delhi</span>
+            </div>
+            <div class="bottomDetails">
+                <div class="column feels">
+                    <i class="bx bxs-thermometer"></i>
+                    <div class="details">
+                        <div class="temp">
+                            <span class="numb-2"></span>
+                            <span class="deg">&#xb0</span><span id="celsius">C</span>
+                        </div>
+                        <p>Feels like</p>
+                    </div>
+                </div>
+                <div class="column humidity">
+                    <i class="bx bxs-droplet-half"></i>
+                    <div class="details">
+                        <span class="numb"></span>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottomDetails">
+                <div class="column windspeed">
+                    <i class="bx bx-wind"></i>
+                    <div class="details">
+                            <span class="numb"></span>
+                            <span class="unit">m/s</span>
+                            <p>Wind Speed</p>
+                    </div>
+                </div>
+                <div class="column sunrise">
+                    <i class="bx bx-sun"></i>
+                    <div class="details">
+                        <span class="numb"></span>
+                        <p>Sunrise</p>
+                    </div>
+                </div>
+            </div>            
+
+        </section>
+    </div>
+    <script src="script1.js"></script>
+</body>
+
+</html>

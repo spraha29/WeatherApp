@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&family=Edu+NSW+ACT+Foundation:wght@700&family=Edu+QLD+Beginner:wght@600&family=Permanent+Marker&family=Splash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&family=Edu+NSW+ACT+Foundation:wght@700&family=Edu+QLD+Beginner:wght@600&family=Overpass&family=Permanent+Marker&family=Splash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,700;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&display=swap');@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height: 100vh;
+    background-image: url('Images_app/clouds.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+} 
+.wrapper{
+    width:400px;
+    border-radius:7px;
+    font-size: 18px;
+    background:white; 
+    border: 4px solid black;
+} 
+.wrapper header{
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 21px;
+    font-weight: 500;
+    color:blue;
+    padding: 16px 15px;
+    display: flex;
+    align-items:center;
+    border-bottom: 1px solid #bfbfbf;
+    font-weight: bolder;
+}
+
+.wrapper .arrow{
+    cursor: pointer;
+    font-family: 'Overpass', sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+    margin-right: 8px;
+}
+
+.wrapper.active header i{
+    font-size: 30px;
+    margin-left: 5px;
+}
+
+.wrapper .input-part{
+    margin: 20px 25px 30px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.wrapper.active .input-part{
+    display: none;
+}
+
+.input-part :where(input,button){
+    width:100%;
+    height:55px;
+    border:none;
+    outline:none;
+    border-radius: 7px;
+}
+
+.info-text{
+    display: none;;
+    font-size: 17px;
+    background: #7dd5ef;
+    text-align: center;
+    padding: 12px 10px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+
+.info-text.error{
+    display: block;
+    color:#721c24;
+    background: #f8d7da;
+    border:1px solid #f5c6cb;
+}
+.info-text.pending{
+    display: block;
+    color:#0c5460;
+    background: #d1ecf1;
+    border:1px solid #bee5eb;
+}
+
+
+.input-part input{
+    text-align: center;
+    font-size: 18px;
+    border:1px solid #bfbfbf;
+}
+
+.input-part input:is(:focus, :valid){
+    border: 3px solid #43AFFC;
+}
+
+.input-part button{
+    color:black;
+    cursor:pointer;
+    background: #7dd5ef;
+    font-size:18px;
+    font-weight: bolder;
+}
+
+.seperator{
+       height:1px;
+       width:100%;
+       margin: 25px 0;
+       background: #ccc;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+}
+
+.seperator::before{
+    content:"or";
+    color: #ccc;
+    font-size: 19px;
+    padding: 0 15px;
+    background: #fff;
+
+}
+
+.wrapper .weatherpart{
+    margin: 30px 0 0;
+    display: none;
+    align-items: center;
+    font-family: 'Edu SA Beginner', cursive;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.wrapper.active .weatherpart{
+    display: flex;
+}
+
+.weatherpart img{
+    max-width:125px;
+}
+
+.weatherpart .temp{
+      display: flex;
+      font-size: 72px;
+      font-weight: 500;
+}
+.weatherpart .temp .numb{
+      font-weight: 600;
+      font-family: 'Edu TAS Beginner', cursive;
+}
+
+.weatherpart .temp .deg{
+    font-size: 40px;
+    margin:10px 5px 0 0;
+    display: block;
+} 
+
+.weatherpart #celsius{
+    font-family: 'Edu TAS Beginner', cursive;
+}
+.weatherpart .location{
+    font-size: 21px;
+    font-family: 'Edu SA Beginner', cursive;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.location i{
+    font-size: 22px;
+    margin-right: 3px;
+    padding-right: 0;
+    border-bottom: 0;
+    color: #43AFFC;
+}
+
+.weatherpart .bottomDetails{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #bfbfbf;
+    justify-content: space-between;
+}
+
+.bottomDetails .column{
+    width:100%;
+    display: flex;
+    align-items:center;
+    padding: 15px 0;
+    justify-content: center;
+}
+
+.column i{
+    color:#43AFFC;
+    font-size: 40px;
+    border-bottom: 0;
+}
+
+.column.sunrise i{
+    color:orange;
+    font-size: 50px;
+}
+
+.column.feels i{
+    color:red;
+    font-size: 50px;
+}
+
+.column.humidity,.sunrise{
+    border-left: 1px solid #bfbfbf;
+}
+
+.details .temp, .humidity,.sunrise,.windspeed span{
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Edu TAS Beginner', cursive;
+    margin-top: -3px;
+}
+
+.details .temp .deg{
+    margin: 0;
+    font-size: 17px;
+    pad: 0 2px 0 1px;
+}
+
+.details p{
+    font-size: 20px;
+    margin-top: -2px;
+    font-family: 'Edu SA Beginner', cursive;
+}
